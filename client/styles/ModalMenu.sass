@@ -1,0 +1,30 @@
+@import 'vars.sass'
+
+.ModalMenu
+  display: flex
+  flex-direction: column
+  cursor: pointer
+  margin-top: -4px
+  //margin-left: 80%
+  flex-wrap: wrap
+  width: 50px
+  span
+    height: 6px
+    width: 100%
+    opacity: 1
+    transition: all 0.5s
+    border-radius: 5px
+    background-color: $mainColor
+    &.secondtSpan
+      margin: 8px 0
+    &.firstSpan
+      &.close
+        opacity: 0
+    &.secondtSpan
+      &.close
+        transform: rotate(45deg)
+        margin: 0
+    &.thirdSpan
+      &.close
+        transform: rotate(-45deg)
+        transform-origin: 34% 27%

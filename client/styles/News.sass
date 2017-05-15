@@ -1,0 +1,117 @@
+@import 'vars.sass'
+
+.News
+  padding-top: 200px
+  .newsOne
+    h2
+      font-size: 30px
+      text-transform: uppercase
+      font-weight: 800
+      margin: 0
+    a
+      margin-right: 10px
+      & > div
+        padding: 8px
+    .newsText
+      margin-bottom: 15px
+      color: lightgrey
+    .socialLinks
+      .leftLinksSocial
+        margin-bottom: 20px
+      width: 100%
+      .rightLinksSocial
+        display: flex
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 60px
+      .heart
+        margin-right: 0
+        i
+          transition: all 0.5s
+          &:hover
+            color: $mainColor
+      i
+        font-size: 18px
+        color: #fff
+      p
+        margin-left: 8px
+        font-size: 12px
+        color: #fff
+        display: inline-flex
+      div
+        display: inline-flex
+        align-items: center
+        border-radius: 5px
+        &.facebook
+          background-color: $facebookColor
+          &:hover
+            background-color: lighten($facebookColor, 10%)
+        &.twitter
+          background-color: $twitterColor
+          &:hover
+            background-color: lighten($twitterColor, 10%)
+        &.in
+          background-color: $instagramColor
+          &:hover
+            background-color: lighten($instagramColor, 10%)
+        &.pinterest
+          background-color: $pinterestColor
+          &:hover
+            background-color: lighten($pinterestColor, 10%)
+        &.googlePlus
+          background-color: $googlePlusColor
+          &:hover
+            background-color: lighten($googlePlusColor, 10%)
+    .newsDate
+      color: lightgrey
+      font-size: 14px
+      margin: 5px 0 30px
+    .newsImageWrap
+      img
+        width: 100%
+    .newsLink
+      margin: 30px 0 60px
+      a
+        color: lightgrey
+        &:hover
+          color: $mainColor
+
+  .freshContainer
+    &:first-child
+      border: none
+      margin: 0
+    h3
+      font-size: 19px
+      padding-top: 10px
+      margin-bottom: 15px
+    h4
+      font-size: 16px
+      text-transform: uppercase
+      font-weight: 800
+      margin-bottom: 6px
+      color: $mainColor
+    img
+      width: 100%
+      margin-bottom: 20px
+    .newsLittleDate
+      color: lightgrey
+    .freshNew
+      border-top: 1px solid grey
+      padding-top: 20px
+      padding-bottom: 20px
+      margin-left: 15px
+      margin-right: 15px
+      .img
+        padding-left: 0
+        padding-right: 0
+
+  .archiveHeader
+    margin-top: 60px
+  .archive
+    a
+      color: lightgrey
+      margin-bottom: 20px
+      font-size: 15px
+      &:hover
+        color: $mainColor
+

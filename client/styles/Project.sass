@@ -1,0 +1,56 @@
+@import 'vars.sass'
+
+.Project
+  position: absolute
+  top: 0
+  background-color: $bgc
+  width: 100%
+  padding-top: 200px
+  .slider
+    position: relative
+    overflow: hidden
+    height: 50vw
+    display: flex
+    align-items: center
+    margin-bottom: 60px
+    img
+      position: absolute
+      width: 100%
+      top: 0
+      left: 0
+
+  .description
+    margin-bottom: 150px
+    position: relative
+    h2
+      font-size: 30px
+      margin-bottom: 25px
+      margin-top: 35px
+    p
+
+      color: lightgrey
+      font-size: 15px
+    .link
+      margin-top: 20px
+      a
+        &:hover
+          color: $mainColor
+  .NewsMain
+    text-align: left
+    padding-bottom: 0
+    .date
+      justify-content: flex-start
+      margin-bottom: 45px
+      span
+        margin: 0 20px
+        &:first-child
+          margin-left: 0
+    a
+      position: absolute
+      bottom: 0
+      color: lightgrey
+      i
+        font-size: 15px
+        color: lightgrey
+
+

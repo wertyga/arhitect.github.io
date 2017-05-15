@@ -1,0 +1,52 @@
+
+
+.Slider
+  position: relative
+  margin-bottom: 60px
+  transition: all 1s
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    transition: all 1s
+    &.hide
+      opacity: 0
+      transition: all 1s
+    &.show
+      opacity: 1
+      transition: all 1s
+  .rightArrow
+    top: 0
+    display: flex
+    align-items: center
+    position: absolute
+    font-size: 30px
+    color: #fff
+    cursor: pointer
+    right: 0
+    justify-content: center
+    width: 30px
+    height: 100%
+    transition: all 0.5s
+    &:hover
+      box-shadow: 0 0 50px rgba(0,0,0,0.5)
+  .leftArrow
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 0
+    position: absolute
+    font-size: 30px
+    color: #fff
+    cursor: pointer
+    left: 0
+    height: 100%
+    width: 30px
+    transition: all 0.5s
+    &:hover
+      box-shadow: 0 0 50px rgba(0,0,0,0.5)
+
+
+
+

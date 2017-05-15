@@ -1,0 +1,64 @@
+@import 'vars.sass'
+
+.Footer
+  background-color: #000
+  color: grey
+  margin-top: 17vw
+  h4
+    font-size: 15px
+    font-weight: lighter
+    text-transform: uppercase
+    letter-spacing: 3px
+    margin-top: 60px
+    //margin-bottom: 40px
+  .phoneMail
+    margin-right: 40px
+  .address
+    margin-top: 40px
+  p
+    font-size: 15px
+  .form
+    display: flex
+    .namePhone
+      width: 50%
+      display: block
+      margin-right: 5px
+    .area
+      width: 50%
+      textarea
+        resize: none
+        height: 100%
+    input, textarea
+      background-color: transparent
+      border: 1px solid grey
+      padding: 8px 5px
+      margin-bottom: 5px
+      width: 100%
+      &[name="email"]
+        margin-bottom: 0
+  .icons
+    padding-top: 20px
+    display: inline-block
+    width: 50%
+    i
+      margin-right: 20px
+  .submit
+    display: inline-block
+    width: 50%
+    text-align: right
+    button
+      background-color: $mainColor
+      color: #fff
+      padding: 10px
+      border: none
+      margin-bottom: 60px
+      &:hover
+        background-color: lightgrey
+      &:focus
+        outline: none
+  .copyright
+    margin-bottom: 60px
+
+
+
+

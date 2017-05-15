@@ -1,0 +1,61 @@
+@import 'fonts.sass'
+
+.header
+  position: absolute
+  top: 0
+  z-index: 100
+  width: 100%
+  transition: opacity 0.5s
+  .left-logo
+    color: #957B5F
+    margin-top: 40px
+    font-size: 22px
+    transition: opacity 0.5s
+  .toggleIcon
+    cursor: pointer
+    font-size: 30px
+  .toggleMenu
+    position: absolute
+    top: 20px
+    width: 100%
+    margin: 0
+    border-right: none
+    border-radius: 5px 0 0 5px !important
+    background-color: rgba(43, 43, 43, 1)
+    li
+      width: 100%
+      a
+        transition: all 0.5s
+        width: 100%
+        display: block
+        height: 100%
+        padding: 20px
+        &:hover
+          background-color: rgba(0, 0, 0, 0.35)
+    .ui.divider
+      margin: 0
+
+  .navigate
+    display: flex
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 16px
+    line-height: 30px
+    justify-content: space-between
+    margin-top: 40px
+    a
+      font-size: 14px
+  .logo
+    color: #957B5F
+    font-size: 22px
+    border: 3px solid #957B5F
+    padding: 9px 8px
+    letter-spacing: 1px
+    font-weight: bold
+
+  .logo-link
+    color: #957B5F
+    font-size: 20px
+    font-weight: 600
+    letter-spacing: 2px
+    margin-left: 30px

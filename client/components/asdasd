@@ -1,0 +1,30 @@
+ {/*<header >*/}
+                {/*<div className="container" style={{position: 'absolute', top: '40px', left: 0, zIndex: 100}}>*/}
+                    {/*<div className="row">*/}
+                            {/*<div className="col-md-10 col-offset-md-1">*/}
+                                {/*<div className="left-logo">*/}
+                                    {/*<span className="logo">AK</span>*/}
+                                    {/*<Link to="/" className="logo-link">МИКЕЛАНДЖЕЛО</Link>*/}
+                                {/*</div>*/}
+                                {/*<div className="navigate">*/}
+                                    {/*/!*<ActiveLink exactActive={true} to="/" label="Главная" />*!/*/}
+                                    {/*/!*<ActiveLink exactActive={true} to="/portfolio" label="Портфолио" />*!/*/}
+                                    {/*/!*<ActiveLink exactActive={true} to="/about" label="О нас" />*!/*/}
+                                    {/*/!*<ActiveLink exactActive={true} to="/news" label="Новости" />*!/*/}
+
+                                    {/*<NavLink exact className="navLink" to="/" activeClassName="active">Главная</NavLink>*/}
+                                    {/*<NavLink exact className="navLink" to="/portfolio" activeClassName="active">Портфолио</NavLink>*/}
+                                    {/*<NavLink exact className="navLink" to="/about" activeClassName="active">О нас</NavLink>*/}
+                                    {/*<NavLink exact className="navLink" to="/news" activeClassName="active">Новости</NavLink>*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
+
+                {/*<Route exact path="/" component={MiddleMain}/>*/}
+                {/*<Route path="/portfolio" component={Portfolio}/>*/}
+                {/*<Route path="/about" component={About}/>*/}
+                {/*<Route path="/news" component={News}/>*/}
+                {/*<Route path="/project/_id" component={Project}/>*/}
+
+            {/*</header>*/}

@@ -1,12 +1,30 @@
 import { dataProjects } from '../../data/dataProjects';
 import dataNews from '../../data/dataNews';
 
-//import Promise from 'bluebird';
-
 export const SET_PROJECT = 'SET_PROJECT';
 export const MONTH_NEWS = 'MONTH_NEWS';
 export const ADD_ONE_NEWS = 'ADD_ONE_NEWS';
 export const ARHIVE_NEWS = 'ARHIVE_NEWS';
+export const SEND_MAIL = 'SEND_MAIL';
+
+
+function mailSend(sendObj) {
+    return {
+        type: SEND_MAIL,
+        sendObj
+    }
+};
+export function sendMail(sendObj) {
+    return dispatch => {
+        return new Promise((res, rej) => {
+            let emailReg = /^[a-zA-Z0-9.!#$%&’*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(!sendObj.email || !emailReg.test(sendObj.email)) {
+                res(false)
+            } else if(sendObj) { res(dispatch(mailSend(sendObj))) };
+        })
+    }
+};
+
 
 function projectFetch(project) {
     return {
@@ -62,7 +80,7 @@ export function fetchOneNews(id) {
         return new Promise ((res, rej) => {
             let findNews = dataNews.find(item => item.header === id);
             if(!findNews) {
-                rej(new Error({ status: 404 }))
+                res(false)
             } else {
                 res(dispatch(addOneNews(findNews)));
             };

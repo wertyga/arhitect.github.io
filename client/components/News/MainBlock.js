@@ -13,6 +13,17 @@ const style = {
     }
 };
 
+dataNews.sort(function (one, second) {
+    let dateOne = one.date.split('/')[0] * one.date.split('/')[1] * one.date.split('/')[2];
+    let dateSecond = second.date.split('/')[0] * second.date.split('/')[1] * second.date.split('/')[2];
+    if(dateOne > dateSecond) {
+        return -1;
+    } else {
+        return 1
+    };
+
+});
+
 
 const MainBlock = createReactClass ({
 
@@ -41,13 +52,13 @@ const MainBlock = createReactClass ({
                                         <div className="row" key={news.id}>
                                             <div className="freshNew clearfix">
                                                 <div className="col-md-5 col-xs-6 img">
-                                                    <Link to={`/news/${news.header}`}>
+                                                    <Link to={'/news/' + news.header}>
                                                         <img src={news.image} alt={news.description}/>
                                                     </Link>
                                                 </div>
                                                 <div className="col-md-6 col-xs-6">
                                                     <div className="newsDescr">
-                                                        <Link to={`/news/${news.header}`}>
+                                                        <Link to={'/news/' + news.header}>
                                                             <h4>{news.description}</h4>
                                                         </Link>
                                                         <div className="newsLittleDate">

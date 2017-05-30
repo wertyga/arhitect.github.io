@@ -16,6 +16,17 @@ const style = {
     }
 };
 
+dataNews.sort(function (one, second) {
+    let dateOne = one.date.split('/')[0] * one.date.split('/')[1] * one.date.split('/')[2];
+    let dateSecond = second.date.split('/')[0] * second.date.split('/')[1] * second.date.split('/')[2];
+    if(dateOne > dateSecond) {
+        return -1;
+    } else {
+        return 1
+    };
+
+});
+
 const MiddleMain = createReactClass ({
     render() {
         return (

@@ -1,12 +1,12 @@
 import shortid from 'shortid';
 
 //images
-import first from './img/news/1.jpg';
-import second from './img/news/2.jpg';
-import third from './img/news/3.jpg';
-import fouth from './img/news/4.jpg';
-import fifth from './img/news/5.jpg';
-import sixth from './img/news/6.jpg';
+import first from './img/news/1.jpeg';
+import second from './img/news/2.jpeg';
+import third from './img/news/3.jpeg';
+import fouth from './img/news/4.jpeg';
+import fifth from './img/news/5.jpeg';
+import sixth from './img/news/6.jpeg';
 
 
 const dataNews = [
@@ -60,15 +60,6 @@ const dataNews = [
     }
 ];
 
-dataNews.sort((one, second) => {
-    let dateOne = one.date.split('/')[0] * one.date.split('/')[1] * one.date.split('/')[2];
-    let dateSecond = second.date.split('/')[0] * second.date.split('/')[1] * second.date.split('/')[2];
-    if(dateOne > dateSecond) {
-        return -1;
-    } else {
-        return 1
-    };
 
-});
 
 export default dataNews;

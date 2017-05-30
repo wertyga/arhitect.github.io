@@ -24,6 +24,7 @@ class Project extends React.Component {
     };
 
     componentDidMount() {
+        document.body.scrollTop = 0;
         this.setState({loading: true});
          if(this.props.match.params.id) {
              this.props.fetchProject(this.props.match.params.id)

@@ -59,7 +59,7 @@ const NewsOne = createReactClass ({
                     <img src={this.props.image} alt={this.props.header}/>
                 </div>
                 <div className="newsLink">
-                    {this.props.link && <Link to={`/news/${this.props.id}`}>Читать дальше</Link>}
+                    {this.props.link && <Link to={'/news/' + this.props.id}>Читать дальше</Link>}
                 </div>
                 {this.props.itsOne && socialLinks}
             </div>

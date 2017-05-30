@@ -44,8 +44,9 @@ const News = createReactClass ({
         this.props.fetchOneNews(this.props.match.params.id)
             .then(res => {
                 this.setState({ loading: false });
+                if(!res) { this.setState({redirect: true})}
             })
-            .catch(err => { console.log(err); this.setState({loading: false, redirect: true}) });
+            .catch(err => {this.setState({loading: false, redirect: true}) });
 
     },
 

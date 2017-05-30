@@ -22,7 +22,7 @@ const ProjectMain = createReactClass ({
             <MediaQuery minWidth={993}>
                 <div className="row rowProject" style={{display: 'flex'}}>
                     <div className="col-md-6 col-sm-12">
-                        <Link to={`/project/${this.props.id}`}>
+                        <Link to={'/project/' + this.props.id}>
                             <img src={this.props.image} alt={this.props.imgAlt} style={{ width: '100%' }}/>
                         </Link>
                     </div>
@@ -31,10 +31,10 @@ const ProjectMain = createReactClass ({
 
                             <span style={style.span}>{this.props.date}</span>
 
-                            <h3>{`${this.props.header}, ${this.props.city}`}</h3>
+                            <h3>{this.props.header + ','}<br/>{this.props.city}</h3>
 
                             <p>{this.props.description}</p>
-                            <Link to={`/project/${this.props.id}`}>Смотреть</Link>
+                            <Link to={'/project/' + this.props.id}>Смотреть</Link>
 
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const ProjectMain = createReactClass ({
                 <MediaQuery maxWidth={992}>
                     <div className="row rowProject">
                         <div className="col-md-6 col-sm-12">
-                            <Link to={`/project/${this.props.id}`}>
+                            <Link to={'/project/' + this.props.id}>
                                 <img src={this.props.image} alt={this.props.imgAlt} style={{  width: '100%', marginBottom: '40px' }}/>
                             </Link>
                         </div>
@@ -53,10 +53,10 @@ const ProjectMain = createReactClass ({
 
                                 <span style={style.span}>{this.props.date}</span>
 
-                                <h3>{`${this.props.header}, ${this.props.city}`}</h3>
+                                <h3>{this.props.header + ', ' + this.props.city}</h3>
 
                                 <p>{this.props.description}</p>
-                                <Link to={`/project/${this.props.id}`}>Смотреть</Link>
+                                <Link to={'/project/' + this.props.id}>Смотреть</Link>
 
                             </div>
                         </div>

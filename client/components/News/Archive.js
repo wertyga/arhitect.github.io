@@ -21,7 +21,7 @@ export function archive(arrData) {
 
     for(let key in dateObj) {
         let date = key + ' ' + '(' + dateObj[key] + ')';
-        resultArr.push(<Link key={key} style={{ display: 'block' }} to={`/news/archive/${key}`}>{date}</Link>)
+        resultArr.push(<Link key={key} style={{ display: 'block' }} to={'/news/archive/' + key}>{date}</Link>)
     }
     return resultArr;
 

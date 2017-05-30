@@ -5,10 +5,10 @@ import FlipMove from 'react-flip-move';
 import AboutOne from './AboutOne';
 import Footer from './Footer';
 
-import first from '../../data/img/personal/1.jpg';
-import second from '../../data/img/personal/2.jpg';
-import third from '../../data/img/personal/3.jpg';
-import fouth from '../../data/img/personal/4.jpg';
+import first from '../../data/img/personal/1.jpeg';
+import second from '../../data/img/personal/2.jpeg';
+import third from '../../data/img/personal/3.jpeg';
+import fouth from '../../data/img/personal/4.jpeg';
 
 const MelGibson = {
     name: 'Мел Гибсон',

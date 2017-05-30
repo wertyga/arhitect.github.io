@@ -1,7 +1,5 @@
 import FlipMove from 'react-flip-move';
 
-import bgImage from '../../data/img/FAVICON-BW.png';
-
 const style = {
    icon: {
        fontSize: '30vw',
@@ -42,10 +40,7 @@ const SocialPage = createReactClass ({
         return (
             <FlipMove appearAnimation='fade'>
                 <div style={style.div}>
-                        <h1 style={style.header}>Social Page</h1>
-                        <div className="wertyga" ><img src={bgImage} style={style.wertyga} alt="1"/></div>
-
-
+                    <h1 style={style.header}>Social Page</h1>
                 </div>
             </FlipMove>
 

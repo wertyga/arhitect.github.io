@@ -19,7 +19,7 @@ const NewsMain = createReactClass ({
                 </div>
                 <div className="text-block text-left">
                     {this.props.text && <p className="text-left">{this.props.text.slice(0, 100) + '...'}</p>}
-                    {this.props.link && <Link to={`/news/${this.props.header}`}>{!this.props.linkName ? 'Читать' : this.props.linkName}</Link>}
+                    {this.props.link && <Link to={'/news/' + this.props.header}>{!this.props.linkName ? 'Читать' : this.props.linkName}</Link>}
                 </div>
             </div>
         );

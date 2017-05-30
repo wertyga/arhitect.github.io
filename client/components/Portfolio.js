@@ -50,10 +50,10 @@ const Portfolio = createReactClass ({
                                         </div>
 
                                         <MediaQuery maxWidth={550}>
-                                            <Link className="blackBack" to={`/project/${project.id}`}><h2 style={{fontSize: '30px'}}>{project.header}</h2></Link>
+                                            <Link className="blackBack" to={'/project/' + project.id}><h2 style={{fontSize: '30px'}}>{project.header}</h2></Link>
                                         </MediaQuery>
                                         <MediaQuery minWidth={551}>
-                                            <Link className="blackBack" to={`/project/${project.id}`}><h2 style={{fontSize: '80px'}}>{project.header}</h2></Link>
+                                            <Link className="blackBack" to={'/project/' + project.id}><h2 style={{fontSize: '80px'}}>{project.header}</h2></Link>
                                         </MediaQuery>
 
                                     </div>
@@ -66,10 +66,10 @@ const Portfolio = createReactClass ({
                                         </div>
 
                                         <MediaQuery maxWidth={550}>
-                                            <Link className="blackBack" to={`/project/${project.id}`}><h2 style={{fontSize: '30px'}}>{project.header}</h2></Link>
+                                            <Link className="blackBack" to={'/project/' + project.id}><h2 style={{fontSize: '30px'}}>{project.header}</h2></Link>
                                         </MediaQuery>
                                         <MediaQuery minWidth={551}>
-                                            <Link className="blackBack" to={`/project/${project.id}`}><h2 style={{fontSize: '80px'}}>{project.header}</h2></Link>
+                                            <Link className="blackBack" to={'/project/' + project.id}><h2 style={{fontSize: '80px'}}>{project.header}</h2></Link>
                                         </MediaQuery>
 
                                     </div>

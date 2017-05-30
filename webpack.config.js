@@ -3,32 +3,42 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 module.exports = {
-
-    devtool: 'false',
 
     entry: [
         path.join(__dirname, 'client/index.js')
     ],
 
     output: {
-        path: path.join(__dirname, 'public'),
-        publicPath: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'public/'),
+        publicPath:  '/',
         filename: 'bundle.js'
     },
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.css$/,
                 loaders: ['style-loader', 'css-loader']
             },
+            //
+            // {
+            //     test: /\.sass$/,
+            //     use: ExtractTextPlugin.extract ({
+            //         fallback: 'style-loader',
+            //         use: ['css-loader', 'sass-loader']
+            //     })
+            //
+            // },
 
             {
                 test: /\.sass$/,
                 loaders: ['style-loader', 'css-loader', 'sass-loader']
+
             },
 
             {
@@ -42,10 +52,16 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 include: path.join(__dirname, 'client'),
-                loader:[{
+                loaders:[{
                     loader: 'babel-loader',
                     query: {
-                        presets: ['react', 'es2015', 'stage-0', 'latest', 'babili']
+                        plugins: [
+                            'transform-runtime',
+                            'transform-react-remove-prop-types',
+                            'transform-react-constant-elements',
+                            'transform-react-inline-elements'
+                        ],
+                        presets: ['react', 'es2015', 'stage-0']
                     }
                 }]
             },
@@ -65,43 +81,58 @@ module.exports = {
                             progressive: true,
                             optimizationLevel: 7,
                             interlaced: false,
-                            pngquant: {
-                                quality: '65-90',
+
+                            mozjpeg: {
+                                quality: 65
+                            },
+
+                            pngquant:{
+                                quality: "65-90",
                                 speed: 4
-                            }
-                        }
+                            },
+
+                            svgo:{
+                                plugins: [
+                                    {
+                                        removeViewBox: false
+                                    },
+                                    {
+                                        removeEmptyAttrs: false
+                                    }
+                                ]
+                            },
+
+
+
+                        },
                     }
                 ]
             },
 
-            // {
-            //     test: /\.sass$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: 'style-loader',
-            //         //resolve-url-loader may be chained before sass-loader if necessary
-            //         use: ['css-loader', 'sass-loader']
-            //     })
-            // }
         ]
     },
 
     plugins: [
-        //new UglifyJSPlugin(),
+        // new ExtractTextPlugin('style.css'),
+        new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.(js|html)$/,
+            threshold: 10240,
+            minRatio: 0.8
+        }),
         new webpack.optimize.OccurrenceOrderPlugin(),
-        //new ExtractTextPlugin('style.css'),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            children: true,
+            async: true,
+        }),
         new webpack.ProvidePlugin({
             'React': 'react',
             "createReactClass": "create-react-class",
-            "PropTypes": "prop-types",
-            '$': 'jquery'
+            "PropTypes": "prop-types"
         })
     ],
-
-    node: {
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty'
-    },
 
     resolve: {
         extensions: ['.js', '.jsx']

@@ -1,31 +1,31 @@
-import vladik from './img/projects/vladik.jpg';
-import moscow1 from './img/projects/moscow1.jpg';
-import spb2 from './img/projects/spb2.jpg';
+import vladik from './img/projects/vladik.jpeg';
+import moscow1 from './img/projects/moscow1.jpeg';
+import spb2 from './img/projects/spb2.jpeg';
 
 //Vladik3
-import Vladik3firstImg from './img/projects/vladik3/1.jpg';
-import Vladik3secondImg from './img/projects/vladik3/2.jpg';
-import Vladik3thirdImg from './img/projects/vladik3/3.jpg';
-import Vladik3fouthImg from './img/projects/vladik3/4.jpg';
+import Vladik3firstImg from './img/projects/vladik3/1.jpeg';
+import Vladik3secondImg from './img/projects/vladik3/2.jpeg';
+import Vladik3thirdImg from './img/projects/vladik3/3.jpeg';
+import Vladik3fouthImg from './img/projects/vladik3/4.jpeg';
 
 //Peter2
-import peter2First from './img/projects/piter2/1.jpg';
-import peter2Second from './img/projects/piter2/2.jpg';
-import peter2Third from './img/projects/piter2/3.jpg';
-import peter2Fourth from './img/projects/piter2/4.jpg';
+import peter2First from './img/projects/piter2/1.jpeg';
+import peter2Second from './img/projects/piter2/2.jpeg';
+import peter2Third from './img/projects/piter2/3.jpeg';
+import peter2Fourth from './img/projects/piter2/4.jpeg';
 
 //Moscow1
-import Moscow1firstImg from './img/projects/Moscow1/1.jpg';
-import Moscow1secondImg from './img/projects/Moscow1/2.jpg';
-import Moscow1thirdImg from './img/projects/Moscow1/3.jpg';
-import Moscow1fouthImg from './img/projects/Moscow1/4.jpg';
+import Moscow1firstImg from './img/projects/Moscow1/1.jpeg';
+import Moscow1secondImg from './img/projects/Moscow1/2.jpeg';
+import Moscow1thirdImg from './img/projects/Moscow1/3.jpeg';
+import Moscow1fouthImg from './img/projects/Moscow1/4.jpeg';
 
 //San-Francisco
-import SF1 from './img/projects/SF/1.jpg';
-import SF2 from './img/projects/SF/2.jpg';
-import SF3 from './img/projects/SF/3.jpg';
-import SF4 from './img/projects/SF/4.jpg';
-import SF from './img/projects/SF/SF.jpg';
+import SF1 from './img/projects/SF/1.jpeg';
+import SF2 from './img/projects/SF/2.jpeg';
+import SF3 from './img/projects/SF/3.jpeg';
+import SF4 from './img/projects/SF/4.jpeg';
+import SF from './img/projects/SF/SF.jpeg';
 
 export const dataProjects = [
     {

@@ -17,7 +17,7 @@ import './styles/index.sass';
 const store = createStore(
     rootReducer,
     composeWithDevTools(
-        applyMiddleware(thunk, logger)
+        applyMiddleware(thunk)
     )
 );
 injectTapEventPlugin();
